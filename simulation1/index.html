@@ -1,76 +1,405 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Water Flow | Simulation</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg " style="background-color: #e3f2fd;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Miet | Simulation</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-              </li>
-              
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Simulation
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./index.html">Simulation - 1</a></li>
-                  <li><a class="dropdown-item" href="../simulation2/index.html">Simulation - 2</a></li>
+<html>
 
-                  <li><a class="dropdown-item" href="../simulation3/index.html">Simulation - 3</a></li>
-                  <li><a class="dropdown-item" href="#">Simulation - 4</a></li>
-                  <li><a class="dropdown-item" href="#">Simulation - 5</a></li>
-                  <li><a class="dropdown-item" href="#">Simulation - 6</a></li>
-                  <li><a class="dropdown-item" href="#">Simulation - 7</a></li>
-                     
-                </ul>
-              </li>
-              
-            </ul>
-           
-          </div>
-        </div>
-      </nav>
-      <center class="my-2">
-        <h1 class="heading">Experiment - 1 : Flow through Orifice</h1>
-      </center>
-      <div class="table_code" id="table">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+  <title>Simulation Website</title>
+  <style>
+    #struct {
+      position: relative;
+      height: 600px;
+      width: 800px;
+      border: 2px black solid;
 
-     <h2>
-      Data Sheet
-     </h2>
-     <table id="tab">
-      <tr>
-        
+      background-image: url("images/drawing.svg");
+      background-size: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .valve {
+      height: 30px;
+      width: 30px;
+      position: absolute;
+
+      border: none;
+      background-color: transparent;
+      background-image: url("images/valve.svg");
+      background-size: 100%;
+      transition-property: transform;
+      transition-duration: 1s;
+      outline: none;
+    }
+
+    #outlet {
+      top: 233px;
+      left: 590px;
+    }
+
+    #motbut {
+      top: 500px;
+      left: 170px;
+    }
+
+    #outlab {
+      opacity: 0;
+      top: 180;
+      left: 570;
+      background-color: rgb(230, 230, 62);
+      border: 1px black solid;
+    }
+
+    #motlab {
+      top: 480;
+      left: 150;
+      background-color: rgb(230, 230, 62);
+      border: 1px black solid;
+    }
+
+    #gatelab {
+      opacity: 0;
+      top: 370;
+      left: 550;
+      background-color: rgb(230, 230, 62);
+      border: 1px black solid;
+    }
+
+    #gatebut {
+      top: 395px;
+      left: 570px;
+    }
+
+    label {
+      position: absolute;
+    }
+
+    #labFlow {
+      top: 290px;
+      left: 680px;
+      background-color: rgb(230, 230, 62);
+      border: 1px black solid;
+    }
+
+    #timer {
+      position: absolute;
+      top: 50px;
+      left: 660px;
+      height: 100px;
+      width: 100px;
+      font-size: 28px;
+    }
+
+    #piezoDiv {
+      position: absolute;
+      top: 30px;
+      left: 250px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    #piezoDiv2 {
+      position: absolute;
+      top: 30px;
+      left: 430px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    #shower {
+      opacity: 0;
+      position: absolute;
+      top: 150px;
+      left: 150px;
+      width: 60px;
+      height: 100px;
+      background-image: url("images/shower.gif");
+      background-size: 100%;
+    }
+
+    .horz-water {
+      position: absolute;
+      background-image: url("images/water-horizintal.gif");
+    }
+
+    .fills {
+      position: absolute;
+      background-color: rgba(155, 207, 207, 0.815);
+      width: 5px;
+      height: 10px;
+    }
+
+    .fillsfin {
+      position: absolute;
+      background-color: rgba(155, 207, 207, 0.815);
+      width: 12px;
+      height: 10px;
+      transition-property: all;
+      transition-duration: 2s;
+      transition: ease;
+    }
+
+    .horz-water2 {
+      position: absolute;
+      opacity: 0;
+      background-image: url("images/water-horizintal2.gif");
+    }
+
+    .mid {
+      background-size: 90%;
+    }
+
+    .leftfill {
+      left: 140;
+      width: 75px;
+      background-size: 70%;
+      height: 20px;
+    }
+
+    #mot1 {
+      top: 495px;
+      left: 40px;
+      opacity: 0;
+      width: 80px;
+      height: 25px;
+      background-size: 120%;
+    }
+
+    #mot13 {
+      top: 55px;
+      left: 40px;
+      opacity: 0;
+      width: 150px;
+      height: 25px;
+      background-size: 30%;
+    }
+
+    #mot2 {
+      top: 470px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 40px;
+      background-size: 320%;
+    }
+
+    #mot3 {
+      top: 430px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 40px;
+      background-size: 320%;
+    }
+
+    #mot4 {
+      top: 390px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 40px;
+      background-size: 320%;
+    }
+
+    #mot5 {
+      top: 350px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 40px;
+      background-size: 320%;
+    }
+
+    #mot6 {
+      top: 310px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 40px;
+      background-size: 320%;
+    }
+
+    #mot7 {
+      top: 270px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 40px;
+      background-size: 320%;
+    }
+
+    #mot8 {
+      top: 230px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 40px;
+      background-size: 320%;
+    }
+
+    #mot9 {
+      top: 190px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 40px;
+      background-size: 320%;
+    }
+
+    #mot10 {
+      top: 150px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 40px;
+      background-size: 320%;
+    }
+
+    #mot11 {
+      top: 110px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 40px;
+      background-size: 320%;
+    }
+
+    #mot12 {
+      top: 60px;
+      left: 40px;
+      opacity: 0;
+      width: 20px;
+      height: 80px;
+      background-size: 320%;
+    }
+
+    #mot14 {
+      top: 60px;
+      left: 165px;
+      opacity: 0;
+      width: 20px;
+      height: 60px;
+      background-size: 340%;
+    }
+
+    #table {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #0a0a0a;
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #c6fff3;
+    }
+
+    #table h2 {
+      text-align: center;
+      color: #0a0a0a;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .tab-button {
+      margin-top: 2rem;
+      background-color: cadetblue;
+      border: none;
+      color: darkmagenta;
+      width: 8rem;
+      height: 3rem;
+      border: 1px solid black;
+    }
+
+    .tab-button:hover {
+      background: cornflowerblue;
+      color: black;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    #quest {
+      /*visibility: hidden;*/
+      position: absolute;
+      background-color: khaki !important;
+      left: 500px;
+      border: 2px black solid;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1 style="color: red; margin-top: 20px;" ><u>
+      Experiment - 1 : Flow through Orifice
+      </u>
+    </h1>
+  </center>
+  <div id="container">
+   
+
+    <center>
+      <button class="tab-button" onclick="dataSheet()">Record</button>
+      <!-- <button class="tab-button" onclick="tableSecond()">Record</button> -->
+    </center>
+    <div id="table">
+
+      <h2>Data Sheet</h2>
+
+      
+      <table id="tab">
+        <tr>
           <th rowspan="2">SNo.</th>
           <th rowspan="2">Head</th>
-          <th colspan="2">Jet co-ordinates</th>
+          <th colspan="2">jet co-ordinates</th>
           <th colspan="2">Net co-ordinates</th>
+          <th rowspan="2">Time Taken for 20 cm rise 't'</th>
+          <th rowspan="2">Q<sub>a</sub>= A x R / t</th>
+          <th rowspan="2">Q<sub>th</sub>= C √H</th>
+          <th rowspan="2">C<sub>b</sub>= Q<sub>a</sub>/Q<sub>th</sub></th>
+          <th rowspan="2">C <sub>y</sub> = x / √4yH</th>
           
-        
-      </tr>
-      <tr>
-        <td>Initial Reading</td>
-      </tr>
-      <tr>
-       <td>
-        Final Reading
-       </td> 
-      </tr>
-     </table>
+
+        </tr>
+        <tr>
+          <td id="dm1">Initial Reading</td>
+          <td id="dm2">Final Reading</td>
+          <td id="ds1">
+            x = x<sub>2</sub> - x<sub>1</sub> / 100
+          </td>
+          <td id="ds1">
+            y = y<sub>2</sub> - y<sub>1</sub> / 100
+          </td>
+          
+        </tr>
+
+        <tr>
+          <td>1</td>
+          <td>20</td>
+          
+        </tr>
+      </table>
+      <br /><br />
+
       
+
     </div>
-  </body>
+
+
+    
+  </div>
+  
+</body>
+
 </html>
