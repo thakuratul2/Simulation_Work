@@ -1,0 +1,450 @@
+<html>
+  <head>
+    <style>
+      #struct {
+        position: relative;
+        height: 600px;
+        width: 800px;
+        border: 2px black solid;
+
+        background-image: url("images/drawing-exp2.svg");
+        background-size: 100%;
+      }
+      .valve {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+
+        border: none;
+        background-color: transparent;
+        background-image: url("images/valve.svg");
+        background-size: 100%;
+        transition-property: transform;
+        transition-duration: 1s;
+        outline: none;
+      }
+      .fillsfin {
+        position: absolute;
+        background-color: rgba(155, 207, 207, 0.815);
+        width: 12px;
+        height: 10px;
+      }
+      #motbut {
+        top: 500px;
+        left: 170px;
+      }
+      #gatebut {
+        top: 405px;
+        left: 620px;
+      }
+      #outlet {
+        top: 185px;
+        left: 610px;
+      }
+      #inlet {
+        top: 105px;
+        left: 150px;
+      }
+      #inlab {
+        opacity: 0;
+        top: 80;
+        left: 130;
+        background-color: rgb(230, 230, 62);
+        border: 1px black solid;
+      }
+      #outlab {
+        opacity: 0;
+        top: 160;
+        left: 570;
+        background-color: rgb(230, 230, 62);
+        border: 1px black solid;
+      }
+      #motlab {
+        top: 480;
+        left: 150;
+        background-color: rgb(230, 230, 62);
+        border: 1px black solid;
+      }
+      #gatelab {
+        opacity: 0;
+        top: 370;
+        left: 550;
+        background-color: rgb(230, 230, 62);
+        border: 1px black solid;
+      }
+      label {
+        position: absolute;
+      }
+      #clock {
+        top: 50px;
+        left: 700px;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        background-image: url("images/watch.svg");
+        background-size: 100%;
+      }
+      #labFlow {
+        top: 290px;
+        left: 750px;
+         background-color: rgb(230, 230, 62);
+        border: 1px black solid;
+      }
+      .container{
+        position:absolute;
+      }
+      #timer {
+        top: 40px;
+        left: 40px;
+        font-size: 28px;
+      }
+      .horz-water {
+        opacity: 0;
+        position: absolute;
+        background-image: url("images/water-horizintal.gif");
+      }
+      .fillsfin {
+        position: absolute;
+        background-color: rgba(155, 207, 207, 0.815);
+        width: 12px;
+        height: 10px;
+      }
+      .horz-water2 {
+        opacity: 0;
+        position: absolute;
+        background-image: url("images/water-horizintal2.gif");
+      }
+      #mot1 {
+        top: 505px;
+        left: 50px;
+
+        width: 80px;
+        height: 25px;
+        background-size: 120%;
+      }
+      #mot2 {
+        top: 470px;
+        left: 50px;
+        width: 15px;
+        height: 40px;
+        background-size: 380%;
+      }
+      #mot3 {
+        top: 430px;
+        left: 50px;
+        width: 15px;
+        height: 40px;
+        background-size: 380%;
+      }
+      #mot4 {
+        top: 390px;
+        left: 50px;
+
+        width: 15px;
+        height: 40px;
+        background-size: 380%;
+      }
+      #mot5 {
+        top: 360px;
+        left: 50px;
+        width: 15px;
+        height: 60px;
+        background-size: 380%;
+      }
+      #mot5 {
+        top: 320px;
+        left: 50px;
+        width: 15px;
+        height: 60px;
+        background-size: 380%;
+      }
+      #mot6 {
+        top: 280px;
+        left: 50px;
+        width: 15px;
+        height: 40px;
+        background-size: 380%;
+      }
+      #mot7 {
+        top: 240px;
+        left: 50px;
+        width: 15px;
+        height: 40px;
+        background-size: 380%;
+      }
+      #mot8 {
+        top: 200px;
+        left: 50px;
+        width: 15px;
+        height: 40px;
+        background-size: 380%;
+      }
+      #mot9 {
+        top: 200px;
+        left: 50px;
+        width: 80px;
+        height: 15px;
+        background-size: 70%;
+      }
+      #mot9 {
+        top: 200px;
+        left: 670px;
+        width: 40px;
+        height: 10px;
+        background-size: 50%;
+      }
+      #mot10 {
+        top: 200px;
+        left: 700px;
+        width: 10px;
+        height: 40px;
+        background-size: 50%;
+      }
+      #mot11 {
+        top: 240px;
+        left: 700px;
+        width: 10px;
+        height: 40px;
+        background-size: 50%;
+      }
+      #mot12 {
+        top: 280px;
+        left: 700px;
+        width: 10px;
+        height: 40px;
+        background-size: 50%;
+      }
+      #mot13 {
+        top: 415px;
+        left: 640px;
+        width: 40px;
+        height: 10px;
+        background-size: 50%;
+      }
+      #mot14 {
+        top: 415px;
+        left: 580px;
+        width: 40px;
+        height: 10px;
+        background-size: 50%;
+      }
+      #mot15 {
+        top: 415px;
+        left: 565px;
+        width: 10px;
+        height: 40px;
+        background-size: 50%;
+      }
+      .dtube {
+        position: absolute;
+        top: 190px;
+        left: 332px;
+        height: 22px;
+        width: 251px;
+      }
+      #lin {
+        opacity: 0;
+        background-image: url("images/laminar.svg");
+        background-size: 100%;
+      }
+      #r2{
+        visibility: hidden;
+      }
+      #r3{
+        visibility: hidden;
+      }
+      #r4{
+        visibility: hidden;
+      }
+      #r5{
+        visibility: hidden;
+      }
+      #r6{
+        visibility: hidden;
+      }
+
+      
+      #table {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #c6fff3;
+      }
+      #table h2 {
+        text-align: center;
+        color: #0a0a0a;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .tab-button {
+        margin-top: 2rem;
+        background-color: cadetblue;
+        border: none;
+        color: darkmagenta;
+        width: 8rem;
+        height: 3rem;
+        border: 1px solid black;
+      }
+      .tab-button:hover {
+        background: cornflowerblue;
+        color: black;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      #exp{
+        left:350;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+  
+      <!--font color="red"><h2 id="exp">Reynold's Experiment</h2></font-->
+      
+      <div id="container">
+    <div id="struct"></div>
+
+    <div id="clock">
+      <label id="timer"></label>
+    </div>
+    <label id="labFlow"></label>
+
+    <div id="mot1" class="horz-water"></div>
+    <div id="mot2" class="horz-water"></div>
+    <div id="mot3" class="horz-water"></div>
+    <div id="mot4" class="horz-water"></div>
+    <div id="mot5" class="horz-water"></div>
+    <div id="mot6" class="horz-water"></div>
+    <div id="mot7" class="horz-water"></div>
+    <div id="mot8" class="horz-water"></div>
+    <div id="mot9" class="horz-water"></div>
+
+    <div id="mot10" class="horz-water"></div>
+    <div id="mot11" class="horz-water"></div>
+    <div id="mot12" class="horz-water"></div>
+    <div id="mot13" class="horz-water"></div>
+    <div id="mot14" class="horz-water"></div>
+    <div id="mot15" class="horz-water"></div>
+      
+    <div id="lin" class="dtube"></div>
+    <div id="fillfinal" style="top: 425px; left: 775px;" class="fillsfin"></div>
+
+    <button id="outlet" class="valve" onclick="clickedValve()"></button>
+    <button id="inlet" class="valve" onclick="calDye()"></button>
+    <button id="gatebut" class="valve" onclick="clickedgate()"></button>
+    <button id="motbut" class="valve" onclick="clickedMot()"></button>
+    <label id="motlab">push the motor button to start</label>
+    <label id="inlab">turn the valve for dye</label>
+    <label id="gatelab">turn the gate valve off</label>
+    <label id="outlab"
+      >turn the outlet valve to set the flow rate</label
+    ><br><br> 
+  </div>
+    
+<center>    <h2>DATASHEET</h2></center>
+
+    <h4>Area of collecting tank, A: 100 cm<sup>2</sup></h4>
+    <h4>Cross sectional area of glass tube, a: 0.7854 cm<sup>2</sup></h4>
+    <h4>Time of collecting water in tank, t : 50 s</h4>
+    <h4>Kinematic Viscosity, γ : 1.006 x 10<sup>-2</sup> cm<sup>2</sup>/sec</h4>
+    <h4>Diameter of glass tube D: 1 cm</h4>
+    
+    <br />
+    <ul>
+      <li><h4>Fill the observation table shown below:-</h4></li>
+      <li><h4>put the value of H from above shown readings</h4></li>
+    </ul>
+    <center>
+    <label id="verify" style=" font-size: 24px"></label>
+    </center>
+    <table id="table">
+      <tr>
+        <th>SNo.</th>
+        <th>(H) cm</th>
+        <th>Volume in t seconds <br>V = H x A</th>
+        <th>Discharge (Q = V/t) (cm3/sec)</th>
+        <th>Velocity, v = Q/a(cm/sec)</th>
+        <th>Reynolds Number, Re = v.D/γ </th>
+        <th>Observed Flow type</th>
+      </tr>
+
+      <tr>
+            <td id="r1c1">1</td>
+            <td id="r1c2"><input ></input></td>
+            <td id="r1c3"><input ></input></td>
+            <td id="r1c4"><input ></input></td>
+            <td id="r1c5"><input ></input></td>
+            <td id="r1c6"><input id="in1" type="number"></input></td>
+            <td id="r1c7"><input ></input></td>
+            <td id="r1c8"><button  onclick="check1()">check calculations</button></td>
+        </tr>
+        
+        <tr id="r2">
+            <td id="r2c1">2</td>
+            <td id="r2c2"><input ></input></td>
+            <td id="r2c3"><input ></input></td>
+            <td id="r2c4"><input ></input></td>
+            <td id="r2c5"><input ></input></td>
+            <td id="r2c6"><input id="in2"></input></td>
+            <td id="r2c7"><input ></input></td>
+            <td><button  onclick="check2()">check calculations</button></td>
+        </tr>
+        <tr id="r3">
+            <td id="r3c1">3</td>
+            <td id="r3c2"><input ></input></td>
+            <td id="r3c3"><input ></input></td>
+            <td id="r3c4"><input ></input></td>
+            <td id="r3c5"><input ></input></td>
+            <td id="r3c6"><input id="in3"></input></td>
+            <td id="r3c7"><input ></input></td>
+            <td><button  onclick="check3()">check calculations</button></td>,
+        </tr>
+<tr id="r4">
+          <td id="r4c1">4</td>
+          <td id="r4c2"><input ></input></td>
+          <td id="r4c3"><input ></input></td>
+          <td id="r4c4"><input ></input></td>
+          <td id="r4c5"><input ></input></td>
+          <td id="r4c6"><input id="in4"></input></td>
+          <td id="r4c7"><input ></input></td>
+          <td><button  onclick="check4()">check calculations</button></td>,
+      </tr>
+      <tr id="r5">
+        <td id="r5c1">5</td>
+        <td id="r5c2"><input ></input></td>
+        <td id="r5c3"><input ></input></td>
+        <td id="r5c4"><input ></input></td>
+        <td id="r5c5"><input ></input></td>
+        <td id="r5c6"><input id="in5"></input></td>
+        <td id="r5c7"><input ></input></td>
+        <td><button  onclick="check5()">check calculations</button></td>,
+    </tr>
+    <tr id="r6">
+      <td id="r6c1">6</td>
+      <td id="r6c2"><input ></input></td>
+      <td id="r6c3"><input ></input></td>
+      <td id="r6c4"><input ></input></td>
+      <td id="r6c5"><input ></input></td>
+      <td id="r6c6"><input id="in6"></input></td>
+      <td id="r6c7"><input ></input></td>
+      <td><button  onclick="check6()">check calculations</button></td>,
+  </tr>
+    </table>
+  
+
+    <script src="js/exp2.js"></script>
+  </body>
+</html>
