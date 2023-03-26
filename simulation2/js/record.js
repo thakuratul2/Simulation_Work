@@ -1,4 +1,5 @@
 const boxes = document.querySelectorAll(".box"),
+ship = document.getElementsByClassName('base'),
       image = document.querySelector(".image");
     
     //Loop through each boxes element
