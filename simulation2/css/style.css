@@ -1,0 +1,62 @@
+#struct {
+    position: relative;
+    height: 600px;
+    width: 800px;
+    border: 2px black solid;
+    top: 25px;
+    left: 350px;
+    background-image: url("../images/Base Diagram.svg");
+    background-size: 100%;
+  }
+  .heading-text{
+    margin-top: 20px;
+    font-size: 50px;
+    text-decoration: underline;
+    color: thistle;
+    margin-bottom: 10px;
+  }
+  
+  #table {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #0a0a0a;
+    text-align: center;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #c6fff3;
+  }
+  #table h2 {
+    text-align: center;
+    color: #0a0a0a;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .tab-button {
+    margin-top: 2rem;
+    background-color: cadetblue;
+    border: none;
+    color: darkmagenta;
+    width: 8rem;
+    height: 3rem;
+    border: 1px solid black;
+  }
+  .tab-button:hover {
+    background: cornflowerblue;
+    color: black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  #exp{
+    left:350;
+    position: absolute;
+  }
