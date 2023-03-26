@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab || www.codinglabweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<title>Drag & Drop in JavaScript</title>-->
+   <style>
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f7fb;
+  }
+  .container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 420px;
+    justify-content: center;
+  }
+  .container .box {
+    position: relative;
+    height: 160px;
+    width: 160px;
+    border-radius: 12px;
+    border: 2px solid #333;
+  }
+  .box .image {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./simulation2/images/Base.svg");
+  }
+  .box.hovered {
+    border: 2px dashed #333;
+  }
+  </style>
+    <!--<script src="script.js" defer></script>-->
+  </head>
+  <body>
+    <section class="container">
+      <div class="box">
+        <div class="image" draggable="true"></div>
+      </div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </section>
+  </body>
+  <script>//DOM Elements
+    const boxes = document.querySelectorAll(".box"),
+      image = document.querySelector(".image");
+    
+    //Loop through each boxes element
+    boxes.forEach((box) => {
+      //When a draggable element dragged over a box element
+      box.addEventListener("dragover", (e) => {
+        e.preventDefault(); //Prevent default behaviour
+        box.classList.add("hovered");
+      });
+    
+      //When a draggable element leaves box element
+      box.addEventListener("dragleave", () => {
+        box.classList.remove("hovered");
+      });
+    
+      //When a draggable element is dropped on a box elemen
+      box.addEventListener("drop", () => {
+        box.appendChild(image);
+        box.classList.remove("hovered");
+      });
+    });
+    </script>
+</html>

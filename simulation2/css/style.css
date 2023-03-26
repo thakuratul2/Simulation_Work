@@ -42,15 +42,90 @@ position: relative;
     bottom: 785px;
     position: relative;
     background-repeat: no-repeat;
+    cursor: move;
     background-image: url('../images/Weight.svg');
   }
-  .weight2{
-    left: 74px;
-    height: 142px;
-    bottom: 923px;
+  .container {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 400px;
+    width: 420px;
+    justify-content: center;
+  }
+  #box2{
+    border: none;
+    bottom: 286px;
+    left: 70px;
+
+  }
+  .text{
+    background-color: yellow;
+    border: 1px solid gray;
+   font-weight: bold;
+    position: absolute;
+    top: 72px;
+    left: 115px;
+  }
+  #box4{
+    bottom: 45px;
+    left: 137px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px solid grey;
+  }
+  #box3{
+    bottom: 47px;
+    left: 143px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px solid grey;
+  }
+  #box5{
+    bottom: 47px;
+    left: 190px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px solid grey;
+  }
+  #box6{
+    bottom: 47px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px solid grey;
+    left: 183px;
+  }
+  .container .box {
     position: relative;
-    background-repeat: no-repeat;
-    background-image: url('../images/Weight.svg');
+    height: 44px;
+    width: 42px;
+    border-radius: 12px;
+    
+  }
+  .box .image {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/Weight.svg");
+  }
+  #image2{
+    height: 100px;
+  }
+  .box.hovered {
+    border: 2px dashed #333;
+  }
+ 
+  #drop-element {
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    margin-top: 20px;
   }
   
   #table {
