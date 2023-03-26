@@ -1,12 +1,33 @@
 #struct {
-    position: relative;
-    height: 600px;
-    width: 800px;
+    
+    height: 847px;
+    width: 730px;
     border: 2px black solid;
     top: 25px;
     left: 350px;
-    background-image: url("../images/Base Diagram.svg");
+   position: relative;
     background-size: 100%;
+  }
+  .base{
+    left: 205px;
+    top: 165px;
+    height: 500px;
+position: relative;
+    background-repeat: no-repeat;
+    background-image: url('../images/Base.svg')
+  }
+  .waterr{
+    height: 350px;
+    background-repeat: no-repeat;
+    background-image: url('../images/Water.svg');
+  }
+  .needle{
+    height: 137px;
+    background-repeat: no-repeat;
+    background-image: url('../images/Needle.svg');
+    left: 186px;
+    top: 18px;
+    position: relative;
   }
   .heading-text{
     margin-top: 20px;
@@ -14,6 +35,22 @@
     text-decoration: underline;
     color: thistle;
     margin-bottom: 10px;
+  }
+  .weight{
+    left: 185px;
+    height: 142px;
+    bottom: 785px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url('../images/Weight.svg');
+  }
+  .weight2{
+    left: 74px;
+    height: 142px;
+    bottom: 923px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url('../images/Weight.svg');
   }
   
   #table {
