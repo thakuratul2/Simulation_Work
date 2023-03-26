@@ -108,12 +108,12 @@
 
         <button id="motbut" class="valve" onclick="clickedMot()"></button>
         <label id="motlab">push the motor button to start</label>
-        <button id="motbut" class="valve" onclick="clickedMot()"></button>
+        <button id="motbut" class="valve" onclick="clickedMot()" ></button>
       </div>
     </center>
 
     <center>
-      <button class="tab-button" onclick="dataSheet()">Record</button>
+      <button class="tab-button" id="button2" onclick="datasheet()" disabled>Record</button>
       <!-- <button class="tab-button" onclick="tableSecond()">Record</button> -->
     </center>
     <div id="table">
@@ -123,15 +123,16 @@
 
       <table id="tab">
         <tr>
-          <th rowspan="2">SNo.</th>
-          <th rowspan="2">Head</th>
+          <th rowspan="2" >SNo.</th>
+          <th rowspan="2" >Head</th>
           <th colspan="2">jet co-ordinates</th>
           <!-- <th colspan="2">Net co-ordinates</th> -->
-          <th rowspan="2">Time Taken for 20 cm rise 't'</th>
+          <th rowspan="2">Time Taken for <br>20 cm rise 't'</th>
           <th rowspan="2">Q<sub>a</sub>= A x R / t</th>
           <th rowspan="2">Q<sub>th</sub>= C √H</th>
-          <th rowspan="2">C<sub>b</sub>= Q<sub>a</sub>/Q<sub>th</sub></th>
-          <th rowspan="2">C <sub>y</sub> = x / √4yH</th>
+          <th rowspan="2">C<sub>d</sub>= Q<sub>a</sub>/Q<sub>th</sub></th>
+          <th rowspan="2">C <sub>v</sub> = x / √4yH</th>
+          <th rowspan="2">C <sub>y</sub> = cd/cv</th>
 
 
         </tr>
@@ -148,14 +149,16 @@
         </tr>
 
         <tr>
-          <td>1</td>
-          <td>20</td>
-          <td>35</td>
-          <td>40</td>
-          <td>25</td>
-          <td>40</td>
-          <td>5</td>
-          <td>25</td>
+          <td id="sno"> </td>
+          <td id="head"> </td>
+          <td id="x"> </td>
+          <td id="y"> </td>
+          <td id="t"> </td>
+          <td id="qa"> </td>
+          <td id="qth"> </td>
+          <td id="cd"> </td>
+          <td id="cv"> </td>
+          <td id="cy"> </td>
         </tr>
       </table>
       <br /><br />
@@ -169,7 +172,8 @@
     <!--button onclick="clicked()">Plot</button><br /-->
   </div>
   </div>
-  <script src="js/graph.js"></script>
+  <script src="js/record.js"></script>
+  
   <script src="js/valve.js"></script>
 </body>
 

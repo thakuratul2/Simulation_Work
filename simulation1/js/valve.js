@@ -46,6 +46,7 @@ function clickedValve() {
 }
 
 function clickedMot() {
+  document.getElementById("button2").disabled = false;
   document.getElementById("motlab").style.opacity = 0;
   document.getElementById("motbut").style.transform = "rotate(" + 270 + "deg)";
   document.getElementById("mot1").style.opacity = 1;
