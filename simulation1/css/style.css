@@ -8,6 +8,19 @@
         background-image: url("../images/model.svg");
         background-size: 100%;
       }
+      #value{
+        position: relative;
+    left: 244px;
+    font-weight: bold;
+    color: tomato;
+    top: 135px;
+      }
+      #value2{
+        position: relative;
+        left: 244px;
+        font-weight: bold;
+        top: 145px;
+      }
       .container {
         display: flex;
         flex-direction: row;
