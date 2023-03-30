@@ -24,7 +24,11 @@
   animation: sui 7s ease-in-out forwards;
 }
 .water{
+  z-index: -200;
   position: absolute;
+  bottom: 0;
+  width: 730px;
+  height: 680px;
 }
 
 .play {
@@ -107,7 +111,7 @@
   cursor: move;
   background-image: url("../images/Weight.svg");
 }
-.container {
+.container2 {
   display: flex;
   gap: 10px;
   position: absolute;
@@ -160,19 +164,14 @@
   border-top: 1px solid grey;
   left: 12px;
 }
-.container .box {
+.weight2{
+  width: 50px;
+}
+.container2 .box {
   position: relative;
   height: 44px;
   width: 42px;
   border-radius: 12px;
-}
-.box .image {
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
-  background-size: cover;
-  background-position: center;
-  background-image: url("../images/Weight.svg");
 }
 
 .image {
