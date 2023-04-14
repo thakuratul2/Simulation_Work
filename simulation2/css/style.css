@@ -1,261 +1,72 @@
-#struct {
-  height: 847px;
-  width: 730px;
-  border: 2px black solid;
-  top: 25px;
-  left: 350px;
-  position: absolute;
-  background-size: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    top: 50px;
+}
+.container h2{
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    text-decoration: underline;
+    position: absolute;
+    left: 367px;
+    color: crimson;
+}
+.struct{
+    height: 800px;
+    width: 730px;
+    border: 2px black solid;
+    top: 25px;
+    left: 350px;
+    position: absolute;
+    background-size: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.initial{
+    position: relative;
+    top: 42px;
+    height: 719px;
+}
+.buttons{
+    position: absolute;
+    /* top: 125px; */
+    bottom: 378px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.grp1{
+    position: relative;
+    right: 40px;
+    top: 17px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
 
 }
-.base {
-  /* left: 243px; */
-  /* top: 115px; */
-  /* height: 500px; */
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  animation: sui 7s ease-in-out forwards;
-}
-.water{
-  z-index: -200;
-  position: absolute;
-  bottom: 0;
-  width: 730px;
-  height: 680px;
-}
+.grp2{
+    position: relative;
+    right: -27px;
+    top: 17px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
 
-.play {
-  cursor: pointer;
-  background-color: red;
 }
-
-.base > img {
-  /* position: absolute; */
-  width: 500px;
-  height: 700px;
-}
-
-.upperScale {
-  z-index: 100;
-  position: relative;
-  margin-bottom: 305px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.waterr {
-  height: 350px;
-  background-repeat: no-repeat;
-  background-image: url("../images/Water-01.png");
-}
-
-.needleimg {
-  width: 220px;
-  /* position: absolute; */
-  /* left: 26px; */
-  /* top: 5px; */
-}
-
-.needle {
-  z-index: 300;
-  position: absolute;
-  bottom: 452px;
-  right: 154px;
-  transform-origin: 111px 7px;
-  animation: ship 7s ease-in-out forwards;
-}
-
-.de > img {
-  width: 310px;
-}
-
-.ruler > img {
-  width: 1000px;
-}
-
-.lowerScale {
-  z-index: 300;
-  position: absolute;
-  top: -150px;
-}
-
-/* .needle { */
-/* height: 137px; */
-/* background-repeat: no-repeat; */
-/**/
-/* left: -7px; */
-/* top: -1px; */
-/* position: absolute; */
-/* } */
-.heading-text {
-  margin-top: 28px;
-  font-size: 50px;
-  text-decoration: underline;
-  color: thistle;
-  margin-bottom: 10px;
-}
-.weight {
-  left: 185px;
-  height: 142px;
-  bottom: 785px;
-  position: relative;
-  background-repeat: no-repeat;
-  cursor: move;
-  background-image: url("../images/Weight.svg");
-}
-.container2 {
-  display: flex;
-  gap: 10px;
-  position: absolute;
-  bottom: 400px;
-  width: 420px;
-  justify-content: center;
-}
-#box2 {
-  border: none;
-  bottom: 216px;
-  left: -84px;
-}
-.text {
-  background-color: yellow;
-  border: 1px solid gray;
-  font-weight: bold;
-  position: absolute;
-  top: 72px;
-  left: 115px;
-}
-#box4 {
-  bottom: -21px;
-  left: -93px;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-  border-top: 1px solid grey;
-}
-#box3 {
-  bottom: -19px;
-  left: -89px;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-  border-top: 1px solid grey;
-}
-#box5 {
-  bottom: -20px;
-  left: 3px;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-  border-top: 1px solid grey;
-}
-#box6 {
-  bottom: -21px;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-  border-top: 1px solid grey;
-  left: 12px;
-}
-.weight2{
-  width: 50px;
-}
-.container2 .box {
-  position: relative;
-  height: 44px;
-  width: 42px;
-  border-radius: 12px;
-}
-
-.image {
-  animation: ship 7s ease-in-out forwards;
-}
-
-#image2 {
-  height: 100px;
-}
-.box.hovered {
-  border: 2px dashed #333;
-}
-
-#drop-element {
-  width: 200px;
-  height: 200px;
-  background-color: gray;
-  margin-top: 20px;
-}
-
-#table {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td,
-th {
-  border: 1px solid #0a0a0a;
-  text-align: center;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #c6fff3;
-}
-#table h2 {
-  text-align: center;
-  color: #0a0a0a;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.tab-button {
-  margin-top: 2rem;
-  background-color: cadetblue;
-  border: none;
-  color: darkmagenta;
-  width: 8rem;
-  height: 3rem;
-  border: 1px solid black;
-}
-.tab-button:hover {
-  background: cornflowerblue;
-  color: black;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-#exp {
-  left: 350;
-  position: absolute;
-}
-
-:root {
-  --rotate: rotate(0deg);
-  --suiRotate: rotate(0deg);
-}
-
-@keyframes ship {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: var(--rotate);
-  }
-}
-
-@keyframes sui {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: var(--suiRotate);
-  }
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }

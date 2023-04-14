@@ -1,159 +1,50 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-  <title>
-    Experiment : Metacentric Height
-  </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experitment Metacentric-height </title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-  <!--font color="red"><h2 id="exp">Reynold's Experiment</h2></font-->
-  <center>
-    <h2 class="heading-text">
-      Metacentric Height
+  <div class="container">
+    <h2>
+      Determination-of-metacentric-height
     </h2>
-  </center>
-
-  <div id="container">
-    <button class="play">Click to animate</button>
-    <div id="struct">
-      <img src="./images/Water-01.png" alt="" class="water">
-      <p class="text">Drag this weight</p>
-      <div class="base">
-        <img src="./images/Base.svg" alt="">
-        <div class="needle">
-          <img src="./images/Needle-01.png" alt="" class="needleimg">
-        </div>
-        <!--     <div class="upperScale"> -->
-        <!--       <div class="de"> -->
-        <!--         <img src="./images/Circular Scale-01.png" alt=""> -->
-        <!--       </div> -->
-        <!--     </div> -->
-        <!--     <div class="lowerScale"> -->
-        <!--       <div class="ruler"> -->
-        <!--         <img src="./images/Scale-01.png" alt=""> -->
-        <!--       </div> -->
-        <!--       </div> -->
-        <!-- </div> -->
-        
-        <div class="container2">
-
-          <div class="box" id="box3"></div>
-          <div class="box" id="box4"></div>
-          <div class="box" id="box5"></div>
-          <div class="box" id="box6"></div>
-        </div>
-
-
-      </div>
-      <div class="weightimg" draggable="true">
-        <img src="./images/Weight.svg" alt="" class="weight2" draggable="true">
-      </div>
-      <div class="water">
-
-      </div>
-
-
-
+<div class="struct">
+  <img src="images/initial.png" alt="" width="730" class="initial">
+  <div class="buttons">
+    <div class="grp1">
+      
+      <button style="border-radius: 5px; background: yellow; font-weight: bold;" id="mybtn1">
+        Put Weight <br> Here
+            </button>
+          
+          
+            <button style="border-radius: 5px; background: yellow; font-weight: bold;" id="mybtn2">
+        Put Weight <br> Here
+            </button>
+          
     </div>
-
-    <!-- <center>    <h2>DATASHEET</h2></center>
-
-    <h4>Area of collecting tank, A: 100 cm<sup>2</sup></h4>
-    <h4>Cross sectional area of glass tube, a: 0.7854 cm<sup>2</sup></h4>
-    <h4>Time of collecting water in tank, t : 50 s</h4>
-    <h4>Kinematic Viscosity, γ : 1.006 x 10<sup>-2</sup> cm<sup>2</sup>/sec</h4>
-    <h4>Diameter of glass tube D: 1 cm</h4>
+   <div class="grp2">
     
-    <br />
-    <ul>
-      <li><h4>Fill the observation table shown below:-</h4></li>
-      <li><h4>put the value of H from above shown readings</h4></li>
-    </ul>
-    <center>
-    <label id="verify" style=" font-size: 24px"></label>
-    </center>
-    <table id="table">
-      <tr>
-        <th>SNo.</th>
-        <th>(H) cm</th>
-        <th>Volume in t seconds <br>V = H x A</th>
-        <th>Discharge (Q = V/t) (cm3/sec)</th>
-        <th>Velocity, v = Q/a(cm/sec)</th>
-        <th>Reynolds Number, Re = v.D/γ </th>
-        <th>Observed Flow type</th>
-      </tr>
 
-      <tr>
-            <td id="r1c1">1</td>
-            <td id="r1c2"><input ></input></td>
-            <td id="r1c3"><input ></input></td>
-            <td id="r1c4"><input ></input></td>
-            <td id="r1c5"><input ></input></td>
-            <td id="r1c6"><input id="in1" type="number"></input></td>
-            <td id="r1c7"><input ></input></td>
-            <td id="r1c8"><button  onclick="check1()">check calculations</button></td>
-        </tr>
-        
-        <tr id="r2">
-            <td id="r2c1">2</td>
-            <td id="r2c2"><input ></input></td>
-            <td id="r2c3"><input ></input></td>
-            <td id="r2c4"><input ></input></td>
-            <td id="r2c5"><input ></input></td>
-            <td id="r2c6"><input id="in2"></input></td>
-            <td id="r2c7"><input ></input></td>
-            <td><button  onclick="check2()">check calculations</button></td>
-        </tr>
-        <tr id="r3">
-            <td id="r3c1">3</td>
-            <td id="r3c2"><input ></input></td>
-            <td id="r3c3"><input ></input></td>
-            <td id="r3c4"><input ></input></td>
-            <td id="r3c5"><input ></input></td>
-            <td id="r3c6"><input id="in3"></input></td>
-            <td id="r3c7"><input ></input></td>
-            <td><button  onclick="check3()">check calculations</button></td>,
-        </tr>
-<tr id="r4">
-          <td id="r4c1">4</td>
-          <td id="r4c2"><input ></input></td>
-          <td id="r4c3"><input ></input></td>
-          <td id="r4c4"><input ></input></td>
-          <td id="r4c5"><input ></input></td>
-          <td id="r4c6"><input id="in4"></input></td>
-          <td id="r4c7"><input ></input></td>
-          <td><button  onclick="check4()">check calculations</button></td>,
-      </tr>
-      <tr id="r5">
-        <td id="r5c1">5</td>
-        <td id="r5c2"><input ></input></td>
-        <td id="r5c3"><input ></input></td>
-        <td id="r5c4"><input ></input></td>
-        <td id="r5c5"><input ></input></td>
-        <td id="r5c6"><input id="in5"></input></td>
-        <td id="r5c7"><input ></input></td>
-        <td><button  onclick="check5()">check calculations</button></td>,
-    </tr>
-    <tr id="r6">
-      <td id="r6c1">6</td>
-      <td id="r6c2"><input ></input></td>
-      <td id="r6c3"><input ></input></td>
-      <td id="r6c4"><input ></input></td>
-      <td id="r6c5"><input ></input></td>
-      <td id="r6c6"><input id="in6"></input></td>
-      <td id="r6c7"><input ></input></td>
-      <td><button  onclick="check6()">check calculations</button></td>,
-  </tr>
-    </table> -->
-
-
-    <!-- <script src="js/exp2.js"></script> -->
-    <script src="js/record.js"></script>
-    <script src="js/animation.js">
-
-    </script>
-
-    </html>
+    
+    <button style="border-radius: 5px; background: yellow; font-weight: bold;" id="mybtn3">
+      Put Weight <br> Here
+          </button>
+      
+       
+          <button style="border-radius: 5px; background: yellow; font-weight: bold;" id="mybtn4">
+      Put Weight <br> Here
+          </button>
+       
+   </div>
+    
+  </div>
+</div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
