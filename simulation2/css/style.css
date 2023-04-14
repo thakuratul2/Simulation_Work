@@ -16,6 +16,7 @@
     left: 367px;
     color: crimson;
 }
+
 .struct{
     height: 800px;
     width: 730px;
@@ -30,8 +31,8 @@
     align-items: center;
 }
 .initial{
-    position: relative;
-    top: 42px;
+   
+    margin-top: 42px;
     height: 719px;
 }
 .buttons{
@@ -44,6 +45,7 @@
     align-items: center;
     gap: 15px;
 }
+
 .grp1{
     position: relative;
     right: 40px;
@@ -55,6 +57,7 @@
     align-items: center;
 
 }
+
 .grp2{
     position: relative;
     right: -27px;
@@ -66,6 +69,7 @@
     align-items: center;
 
 }
+
 .disabled {
     pointer-events: none;
     opacity: 0.5;

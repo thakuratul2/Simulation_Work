@@ -1,4 +1,4 @@
-function delayedNavigation() {
+/*function delayedNavigation() {
    
     var delayInMilliseconds = 1000; // 1 second
 
@@ -8,6 +8,7 @@ function delayedNavigation() {
     }, delayInMilliseconds);
   
 }
+
 var button = document.getElementById("mybtn1");
 button.addEventListener("click", delayedNavigation);
 
@@ -22,6 +23,7 @@ function delayedNavigation2() {
     }, delayInMilliseconds);
   
 }
+
 var button = document.getElementById("mybtn2");
 button.addEventListener("click", delayedNavigation2);
 
@@ -35,6 +37,7 @@ function delayedNavigation3() {
     }, delayInMilliseconds);
   
 }
+
 var button = document.getElementById("mybtn3");
 button.addEventListener("click", delayedNavigation3);
 
@@ -52,3 +55,4 @@ var button = document.getElementById("mybtn4");
 button.addEventListener("click", delayedNavigation4);
 
 
+*/
