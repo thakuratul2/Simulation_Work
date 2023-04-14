@@ -4,9 +4,11 @@
         height: 666px;
         width: 800px;
         border: 2px black solid;
-        background-repeat: no-repeat;
-        background-image: url("../images/model.svg");
-        background-size: 100%;
+        
+      }
+      .baseimg{
+        position: relative;
+        top: 86px;
       }
       #value{
         position: relative;
@@ -39,12 +41,13 @@
         outline: none;
       }
       #outlet {
-        top: 421px;
-        left: 555px;
+           top: 320px;
+    left: 522px;
       }
       #motbut {
-        top: 534px;
-        left: 225px;
+        top: 397px;
+        left: 197px;
+    
       }
       #outlab {
         opacity: 0;
@@ -54,15 +57,15 @@
         border: 1px black solid;
       }
       #motlab {
-        top: 478px;
+        top: 368px;
         left: 150px;
         background-color: rgb(230, 230, 62);
         border: 1px black solid;
       }
       #gatelab {
         opacity: 0;
-        top: 370;
-        left: 550;
+        top: 323px;
+    left: 359px;
         background-color: rgb(230, 230, 62);
         border: 1px black solid;
       }
