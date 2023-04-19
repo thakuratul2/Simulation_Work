@@ -143,9 +143,9 @@
       }
       .leftfill {
         left: 140;
-        width: 75px;
+        width: 121px;
         background-size: 70%;
-        height: 20px;
+        
       }
 
       #mot1 {
@@ -157,10 +157,11 @@
         background-size: 120%;
       }
       #mot13 {
-        top: 125px;
-        left: 60px;
+        top: 150px;
+        left: 125px;
         opacity: 0;
-        width: 150px;
+        width: 136px;
+        
         height: 25px;
         background-size: 30%;
       }
@@ -192,24 +193,21 @@
         top: 350px;
         left: 60px;
         opacity: 0;
-        width: 20px;
-        height: 40px;
+        
         background-size: 320%;
       }
       #mot6 {
         top: 310px;
         left: 60px;
         opacity: 0;
-        width: 20px;
-        height: 40px;
+      
         background-size: 320%;
       }
       #mot7 {
         top: 270px;
         left: 60px;
         opacity: 0;
-        width: 20px;
-        height: 40px;
+        
         background-size: 320%;
       }
       #mot31{
@@ -224,13 +222,12 @@
         top: 230px;
         left: 60px;
         opacity: 0;
-        width: 20px;
-        height: 40px;
+        
         background-size: 320%;
       }
       #mot9 {
         top: 190px;
-        left: 60px;
+        left: 98px;
         opacity: 0;
         width: 20px;
         height: 40px;
@@ -238,7 +235,7 @@
       }
       #mot10 {
         top: 150px;
-        left: 60px;
+        left: 101px;
         opacity: 0;
         width: 20px;
         height: 40px;

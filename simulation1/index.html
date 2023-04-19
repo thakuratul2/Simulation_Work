@@ -16,13 +16,13 @@
   <div id="container">
     <center>
       <div id="struct">
-<img src="./images/base.svg" alt="" class="baseimg">
-<div id="value">
-The value of X is 70
-</div>
-<div id="value2">
-  The value of Y is 17
-  </div>
+        <img src="./images/base.svg" alt="" class="baseimg">
+        <div id="value">
+          The value of X is 70
+        </div>
+        <div id="value2">
+          The value of Y is 17
+        </div>
 
 
         <label id="labFlow"></label>
@@ -49,17 +49,22 @@ The value of X is 70
 
         <div id="mot19"></div>
         <div id="mot20"></div>
-        <div id="mot18" style="top: 199px;left: 207px;height: 99px;" class="horz-water2 leftfill"></div>
-        <div id="mot17" style="top: 169px;left: 137px;width: 88px;height: 101px;" class="horz-water2 leftfill"></div>
+        <div id="mot18" style="top: 199px;left: 207px;" class="horz-water2 leftfill"></div>
+        <div id="mot17" style="top: 157px;left: 159px; width: 88px; height:99px;" class="horz-water2 leftfill"></div>
         <div id="mot16" style="top: 270px; left: 144px;" class="horz-water2 leftfill"></div>
         <div id="mot15" style="top: 278px;left: 174px;" class="horz-water2 leftfill"></div>
 
-        <div id="mot21" style="top: 216px;left: 292px;width: 69px;height: 25px;" class="horz-water2 mid"></div>
-        <div id="mot22" style="top: 225px;left: 356px;width: 60px;height: 27px;transform: rotate(14deg);"
+        <div id="mot21" style="top: 218px;
+        left: 267px;
+        width: 70px;
+        height: 25px;
+        opacity: 0;
+        transform: rotate(12deg);" class="horz-water2 mid"></div>
+        <div id="mot22" style="top: 231px;left: 348px;width: 60px;height: 27px;transform: rotate(14deg);"
           class="horz-water2 mid"></div>
-        <div id="mot23" style="top: 245px;left: 420px;width: 60px;height: 28px;" class="horz-water2 mid"></div>
-        <div id="mot24" style="top: 250px; left: 490px; width: 60px; height: 22px;" class="horz-water2 leftfill"></div>
-        <div id="mot25" style="top: 250px; left: 560px; width: 60px; height: 20px;" class="horz-water2 leftfill"></div>
+        <div id="mot23" style="top: 245px;left: 420px;width: 60px;height: 28px; transform:rotate(13deg)" class="horz-water2 mid"></div>
+        <div id="mot24" style="top: 267px; transform: rotate(14deg); left: 490px; width: 60px; height: 22px;" class="horz-water2 leftfill"></div>
+        <div id="mot25" style="top: 287px; transform:rotate(22deg); left: 560px; width: 60px; height: 20px;" class="horz-water2 leftfill"></div>
         <div id="mot14" class="horz-water"></div>
         <div id="mot31" class="horz-water2 leftfill"></div>
         <div id="mot26" style="top: 290px; left: 500px;" class="horz-water2 leftfill"></div>
@@ -67,10 +72,10 @@ The value of X is 70
         <div id="mot29" style="top: 362px;left: 614px;transform: rotate(90deg);" class="horz-water2 leftfill"></div>
 
         <div id="mot28" style="top: 416px; left: 609px;" class="horz-water2 leftfill"></div>
-        <div id="mot30" style="top: 442px; left: 615px; height: 40;" class="horz-water2 leftfill"></div>
+        <div id="mot30" style="top: 318px; left: 556px; height: 40;" class="horz-water2 leftfill"></div>
 
         <div id="mot27"
-          style="top: 278px;left: 613px;width: 77px;height: 38px;background-size: 150%;transform: rotate(90deg);"
+          style="top: 278px;left: 613px;width: 77px;background-size: 150%;transform: rotate(90deg);"
           class="horz-water2"></div>
         <div id="mot31" style="
               top: 235px;
@@ -94,14 +99,22 @@ The value of X is 70
               background-size: 150%;
             " class="horz-water2"></div>
         <div id="mot34" style="
-            top: 457px;left: 551px;width: 19px;height: 42px;background-size: 150%;
+            top: 457px;left: 551px;width: 19px;background-size: 150%;
             " class="horz-water2"></div>
 
         <div id="mot35" style="
-            top: 533px;left: 447px;width: 72px;height: 36px;background-size: 80%;
+        top: 394px;
+        left: 436px;
+        width: 72px;
+        height: 22px;
             " class="horz-water2"></div>
         <div id="mot36" style="
-            top: 481px;left: 352px;width: 33px;height: 147px;background-size: 120%;transform: rotate(90deg);
+        top: 322px;
+        left: 340px;
+        width: 16px;
+        height: 176px;
+        background-size: 120%;
+        transform: rotate(90deg);
             " class="horz-water2"></div>
 
 
@@ -113,7 +126,7 @@ The value of X is 70
 
         <button id="motbut" class="valve" onclick="clickedMot()"></button>
         <label id="motlab">push the motor button to start</label>
-        <button id="motbut" class="valve" onclick="clickedMot()" ></button>
+        <button id="motbut" class="valve" onclick="clickedMot()"></button>
       </div>
     </center>
 
@@ -128,8 +141,8 @@ The value of X is 70
 
       <table id="tab">
         <tr>
-          <th rowspan="2" >SNo.</th>
-          <th rowspan="2" >Head</th>
+          <th rowspan="2">SNo.</th>
+          <th rowspan="2">Head</th>
           <th colspan="2">jet co-ordinates</th>
           <!-- <th colspan="2">Net co-ordinates</th> -->
           <th rowspan="2">Time Taken for <br>20 cm rise 't'</th>
@@ -178,7 +191,7 @@ The value of X is 70
   </div>
   </div>
   <script src="js/record.js"></script>
-  
+
   <script src="js/valve.js"></script>
 </body>
 
