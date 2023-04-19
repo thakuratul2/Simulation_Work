@@ -149,10 +149,10 @@
       }
 
       #mot1 {
-        top: 535px;
-        left: 84px;
+        top: 391px;
+        left: 98px;
         opacity: 0;
-        width:89px;
+        width:70px;
         height: 25px;
         background-size: 120%;
       }
@@ -165,24 +165,24 @@
         background-size: 30%;
       }
       #mot2 {
-        top: 477px;
-    left: 60px;
+        top:325px;
+    left: 99px;
     opacity: 0;
     width: 20px;
     height: 69px;
     background-size: 320%;
       }
       #mot3 {
-        top: 430px;
-        left: 60px;
+        top: 277px;
+        left: 99px;
         opacity: 0;
         width: 20px;
         height: 40px;
         background-size: 320%;
       }
       #mot4 {
-        top: 390px;
-        left: 60px;
+        top: 236px;
+        left: 99px;
         opacity: 0;
         width: 20px;
         height: 40px;
