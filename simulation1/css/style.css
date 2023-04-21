@@ -9,6 +9,7 @@
       .baseimg{
         position: relative;
         top: 86px;
+        height: 412px;
       }
       #value{
         position: relative;
@@ -157,7 +158,7 @@
         background-size: 120%;
       }
       #mot13 {
-        top: 150px;
+        top: 96px;
         left: 125px;
         opacity: 0;
         width: 136px;
@@ -219,10 +220,11 @@
         background-size: 320%;
       }
       #mot8 {
-        top: 230px;
-        left: 60px;
+        top: 104px;
+        left: 102px;
         opacity: 0;
-        
+        height: 50px;
+        width: 18px;
         background-size: 320%;
       }
       #mot9 {
