@@ -211,6 +211,25 @@
         
         background-size: 320%;
       }
+      .holder{
+        position: absolute;
+        margin-left: 342px;
+        /* margin-bottom: 9px; */
+        bottom: 447px;
+    
+      }
+      .holderimg{
+        width: 58px;
+        height: 151px;
+      }
+      .scale{
+        position: relative;
+        bottom: 338px;
+      }
+      .scaleimg{
+        height: 132px;
+        width: 19px;
+      }
       #mot31{
         top: 270px;
         left: 630px;
