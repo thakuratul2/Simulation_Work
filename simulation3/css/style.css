@@ -4,22 +4,23 @@
     box-sizing: border-box;
 }
 .container{
-    position: relative;
+    position: absolute;
     top: 50px;
 }
-.container h2{
+
+.heading{
     text-align: center;
     padding: 40px;
     font-size: 40px;
     text-decoration: underline;
-    position: absolute;
-    left: 367px;
+    position: relative;
+  margin-left: 500px;
     color: crimson;
 }
 
 .struct{
     height: 800px;
-    width: 730px;
+    width: 733px;
     border: 2px black solid;
     top: 25px;
     left: 350px;
@@ -30,11 +31,7 @@
     justify-content: center;
     align-items: center;
 }
-.initial{
-   
-    margin-top: 42px;
-    height: 719px;
-}
+
 .buttons{
     position: absolute;
     /* top: 125px; */
