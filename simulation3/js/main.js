@@ -10,7 +10,6 @@ playBtn.addEventListener('click', function() {
     gifImage.src = gifImage.src;
     // playBtn.textContent = 'Pause';
   } else {
-    
     gifImage.classList.add('paused');
    // playBtn.textContent = 'Play';
   }
