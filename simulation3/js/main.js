@@ -5,7 +5,6 @@ const playBtn = document.getElementById('motbut');
 
 playBtn.addEventListener('click', function() {
   if (gifImage.classList.contains('paused')) {
-   
     gifImage.classList.remove('paused');
     gifImage.src = gifImage.src;
     // playBtn.textContent = 'Pause';
