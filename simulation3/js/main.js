@@ -1,13 +1,13 @@
-const gifImage = document.getElementById('gif_test');
-const playBtn = document.getElementById('motbut');
+function changeImage() {
+  var image = document.getElementById('gif_test');
+  var currentImageSrc = image.src;
 
-playBtn.addEventListener('click', function() {
-  if (gifImage.classList.contains('paused')) {
-    gifImage.classList.remove('paused');
-    gifImage.src = gifImage.src;
-    // playBtn.textContent = 'Pause';
+  
+  if (currentImageSrc.includes('images/initial.png')) {
+    image.src = 'images/lab.gif';
+    image.alt = 'Lab Gif';
   } else {
-    gifImage.classList.add('paused');
-   // playBtn.textContent = 'Play';
+    image.src = 'images/initial.png';
+    image.alt = 'initial 1';
   }
-});
+}
